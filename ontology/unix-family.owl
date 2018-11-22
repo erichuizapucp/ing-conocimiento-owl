@@ -1,0 +1,1048 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.pucp.edu.pe/ontologies/unix-family#"
+     xml:base="http://www.pucp.edu.pe/ontologies/unix-family"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.pucp.edu.pe/ontologies/unix-family"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#hasCertification -->
+
+    <owl:ObjectProperty rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#hasCertification">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#isCertificationOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#UnixOS"/>
+        <rdfs:range rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#UnixSpecificationVersion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#inheritsCharacteristicsTo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#UnixOS"/>
+        <rdfs:range rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#UnixOS"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#inheritsCharacteristicsTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#inheritsCharacteristicsTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#UnixOS"/>
+        <rdfs:range rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#UnixOS"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#isCertificationOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#isCertificationOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#UnixSpecificationVersion"/>
+        <rdfs:range rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#UnixOS"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#AIX -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#AIX">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#UnixOS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#AIX1x -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#AIX1x">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#AIX"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#AIX3x -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#AIX3x">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#AIX"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#AIX7x -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#AIX7x">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#AIX"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#BSD -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#BSD">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#UnixOS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#BSD1.0-2.0 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#BSD1.0-2.0">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Unix5-6"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#BSD3.0-4.1 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#BSD3.0-4.1">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD1.0-2.0"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Unix32V"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#BSD4.2 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#BSD4.2">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD3.0-4.1"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#BSD4.3 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#BSD4.3">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD4.2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#BSD4.3Reno -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#BSD4.3Reno">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD4.3Tahoe"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#BSD4.3Tahoe -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#BSD4.3Tahoe">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD4.3"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#BSDNet1 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#BSDNet1">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD4.3Tahoe"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#BSDNet2 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#BSDNet2">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD4.3Reno"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#CertifiedUnixSystem -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#CertifiedUnixSystem">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#UnixOS"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCertification"/>
+                                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#SpecVersionUnix03"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCertification"/>
+                                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#SpecVersionUnix93"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCertification"/>
+                                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#SpecVersionUnix95"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCertification"/>
+                                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#SpecVersionUnix98"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#ClosedSource -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#ClosedSource">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#LicensingModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#DragonFlyBSD1.0-4.8 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#DragonFlyBSD1.0-4.8">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#FreeBSD3.3-11.x"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#FreeBSD1.0-2.2.x -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#FreeBSD1.0-2.2.x">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#386BSD"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#FreeBSD3.0-3.2 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#FreeBSD3.0-3.2">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#FreeBSD1.0-2.2.x"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#FreeBSD3.3-11.x -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#FreeBSD3.3-11.x">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#FreeBSD3.0-3.2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#HP -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#HP">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#UnixOS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#HP-UX -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#HP-UX">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#HP"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#LicensingModel -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#LicensingModel"/>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#Linux -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Linux">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#UnixOS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#Linux1x -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Linux1x">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Linux"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#Linux2x -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Linux2x">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Linux"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#Linux3x -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Linux3x">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Linux"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#Linux4x -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Linux4x">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Linux"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#MacOSX -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#MacOSX">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#FreeBSD3.0-3.2"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#MacOSXServer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCertification"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#SpecVersionUnix03"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#MacOSXServer -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#MacOSXServer">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#NetBSD1.3"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#NexTSTEP-OPENSTEP1.0-4.0"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD4.4-Lite&amp;LiteRelease2"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#Minix -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Minix">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#UnixOS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#Minix1x -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Minix1x">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Minix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#Minix2x -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Minix2x">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Minix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#Minix3x -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Minix3x">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Minix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#NetBSD0.8-1.0 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#NetBSD0.8-1.0">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSDNet2"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#386BSD"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#NetBSD1.1-1.2 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#NetBSD1.1-1.2">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#NetBSD0.8-1.0"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#NetBSD1.3 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#NetBSD1.3">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#NetBSD1.1-1.2"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD4.4-Lite&amp;LiteRelease2"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#NetBSD1.3-1.7 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#NetBSD1.3-1.7">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#FreeBSD3.3-11.x"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#NetBSD1.3"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#NexTSTEP-OPENSTEP1.0-4.0 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#NexTSTEP-OPENSTEP1.0-4.0">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD4.3"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#OpenBSD -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#OpenBSD">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#OpenBSD1.0-2.2 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#OpenBSD1.0-2.2">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#NetBSD0.8-1.0"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#OpenBSD2.3-6.1 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#OpenBSD2.3-6.1">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#OpenBSD1.0-2.2"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD4.4-Lite&amp;LiteRelease2"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#OpenServer5x -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#OpenServer5x">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Xenix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#OpenServer6x -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#OpenServer6x">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Xenix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#OpenSource -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#OpenSource">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#LicensingModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#PDP-7 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#PDP-7">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#AT&amp;T"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#SCOXenix -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SCOXenix">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Xenix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#SCOXenix286 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SCOXenix286">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Xenix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#SCOXenix386 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SCOXenix386">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Xenix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#SCOXenix3x -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SCOXenix3x">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Xenix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#SharedSource -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SharedSource">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#LicensingModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#SimilarToUnix -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SimilarToUnix">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#UnixOS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#Solaris -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Solaris">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Sun"/>
+        <owl:disjointWith rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#SunOS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#SpecVersionUnix03 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SpecVersionUnix03">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#UnixSpecificationVersion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#SpecVersionUnix93 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SpecVersionUnix93">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#UnixSpecificationVersion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#SpecVersionUnix95 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SpecVersionUnix95">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#UnixSpecificationVersion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#SpecVersionUnix98 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SpecVersionUnix98">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#UnixSpecificationVersion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#Sun -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Sun">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#UnixOS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#SunOS -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SunOS">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Sun"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#SystemIII -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SystemIII">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#AT&amp;T"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#SystemV -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SystemV">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#AT&amp;T"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#TraditionalUnix -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#TraditionalUnix">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#UnixOS"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#SystemV"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Unix5-6"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Unix7"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#Unix1-4 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Unix1-4">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#AT&amp;T"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#PDP-7"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#Unix32V -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Unix32V">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#AT&amp;T"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Unix7"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#Unix5-6 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Unix5-6">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#AT&amp;T"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Unix1-4"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#Unix7 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Unix7">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#AT&amp;T"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Unix5-6"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#Unix8 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Unix8">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#AT&amp;T"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD3.0-4.1"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Unix7"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#Unix9-10 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Unix9-10">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#AT&amp;T"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD4.3"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Unix8"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#UnixOS -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#UnixOS"/>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#UnixSpecificationVersion -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#UnixSpecificationVersion"/>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#Xenix -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Xenix">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#UnixOS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#Xenix1x -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Xenix1x">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Xenix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#Xenix2x -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Xenix2x">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Xenix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#Xenix3x -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Xenix3x">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Xenix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#386BSD -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#386BSD">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSDNet2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#AT&amp;T -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#AT&amp;T">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#UnixOS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#BSD4.4-Lite&amp;LiteRelease2 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#BSD4.4-Lite&amp;LiteRelease2">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD4.3Reno"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#AIX1x"/>
+            <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#AIX3x"/>
+            <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#AIX7x"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#ClosedSource"/>
+            <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#OpenSource"/>
+            <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SharedSource"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Linux1x"/>
+            <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Linux2x"/>
+            <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Linux3x"/>
+            <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Linux4x"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Minix1x"/>
+            <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Minix2x"/>
+            <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Minix3x"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#OpenServer5x"/>
+            <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#OpenServer6x"/>
+            <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SCOXenix"/>
+            <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SCOXenix286"/>
+            <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SCOXenix386"/>
+            <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SCOXenix3x"/>
+            <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Xenix1x"/>
+            <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Xenix2x"/>
+            <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Xenix3x"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+

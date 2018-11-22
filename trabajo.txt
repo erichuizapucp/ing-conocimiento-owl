@@ -1,0 +1,14 @@
+1. Crear una ontología en Protege
+    Jerarquía de clases, relaciones
+
+2. Validar Ontologia
+    En Protege, en Jena
+
+3. Realizar Inferencias
+    Clases definidas
+    * En Protégé
+    * En Jena
+
+4. Realizar consultas en SPARQL
+    * Twinkle
+    * Jena
