@@ -1068,10 +1068,17 @@
 
     <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#_SimilarToUnix">
         <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasLicensingModel"/>
-                <owl:allValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#OpenSource"/>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#PDP-7"/>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasLicensingModel"/>
+                        <owl:allValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#OpenSource"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </owl:equivalentClass>
     </owl:Class>
     
