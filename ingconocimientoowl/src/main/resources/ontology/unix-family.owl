@@ -332,10 +332,60 @@
     
 
 
-    <!-- http://www.pucp.edu.pe/ontologies/unix-family#HP-UX -->
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#HP-UX1.0-1.2 -->
 
-    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#HP-UX">
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#HP-UX1.0-1.2">
         <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#HP"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#SystemIII"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#HP-UX2.0-3.0 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#HP-UX2.0-3.0">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#HP"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#HP-UX1.0-1.2"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#SystemV-R3"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#HP-UX6-11 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#HP-UX6-11">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#HP"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#HP-UX2.0-3.0"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#SystemV-R4"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -807,6 +857,48 @@
     
 
 
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#Solaris10 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Solaris10">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Solaris"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Solaris2.1-9"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#Solaris11.0-11.3 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Solaris11.0-11.3">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Solaris"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Solaris10"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#Solaris2.1-9 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Solaris2.1-9">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Solaris"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#SystemV-R4"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#SpecVersionUnix03 -->
 
     <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SpecVersionUnix03">
@@ -863,9 +955,25 @@
     
 
 
-    <!-- http://www.pucp.edu.pe/ontologies/unix-family#SystemV -->
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#SystemV-R1-R2 -->
 
-    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SystemV">
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SystemV-R1-R2">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#AT&amp;T"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#SystemV-R3 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SystemV-R3">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#AT&amp;T"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#SystemV-R4 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SystemV-R4">
         <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#AT&amp;T"/>
     </owl:Class>
     
@@ -1092,7 +1200,7 @@
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
-                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#SystemV"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#SystemV-R1-R2"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
@@ -1139,6 +1247,34 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
                 <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#BSD4.3Reno"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#HP-UX11i+ -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#HP-UX11i+">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#HP"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#HP-UX6-11"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#OpenSolaris&amp;derivatives -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#OpenSolaris&amp;derivatives">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Solaris"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Solaris10"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
