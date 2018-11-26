@@ -23,7 +23,10 @@ public class Main {
                 Inferences inferences = new Inferences();
                 if (cmd.hasOption("class")) {
                     String className = cmd.getOptionValue("class");
-                    inferences.processInference(className);
+
+                    if (className.equals("similar-to-unix")) {
+                        inferences.processSimilarToUnix();
+                    }
                 }
             }
 

@@ -1,31 +1,31 @@
 package pe.edu.pucp.owl;
 
-import org.apache.jena.ontology.OntClass;
-import org.apache.jena.ontology.OntModel;
-import org.apache.jena.ontology.OntModelSpec;
-import org.apache.jena.rdf.model.Model;
-import org.apache.jena.rdf.model.ModelFactory;
-import org.apache.jena.util.FileManager;
-import org.apache.jena.util.iterator.ExtendedIterator;
+import org.semanticweb.HermiT.Reasoner;
+import org.semanticweb.owlapi.apibinding.OWLManager;
+import org.semanticweb.owlapi.io.FileDocumentSource;
+import org.semanticweb.owlapi.model.*;
+import org.semanticweb.owlapi.reasoner.OWLReasoner;
+import org.semanticweb.owlapi.util.ShortFormProvider;
+import org.semanticweb.owlapi.util.SimpleShortFormProvider;
+import pe.edu.pucp.owl.api.DLQueryEngine;
+
+import java.io.File;
+import java.net.URLDecoder;
+import java.util.Iterator;
+import java.util.Set;
 
 
 public class Inferences {
-    private final String UNIX_FAMILY_NS = "http://www.pucp.edu.pe/ontologies/unix-family#";
-    private final String SIMILAR_TO_UNIX_URI = UNIX_FAMILY_NS + "_SimilarToUnix";
+    private final String SIMILAR_TO_UNIX = "_SimilarToUnix";
 
-    private Model model;
-    private OntModelSpec spec;
-    private OntModel owlModel;
-
-    public void processInference(String className) {
-        model = FileManager.get().loadModel("ontology/unix-family.owl");
-        spec = new OntModelSpec(OntModelSpec.OWL_MEM_RULE_INF);
-
+    public void processSimilarToUnix() {
         try {
-            owlModel = ModelFactory.createOntologyModel(spec, model);
+            DLQueryEngine engine = getEngine();
+            Set<OWLClass> result = engine.getSubClasses(SIMILAR_TO_UNIX, false);
 
-            if (className.equals("similar-to-unix")) {
-                SimilarToUnixInference();
+            Iterator<OWLClass> it = result.iterator();
+            while (it.hasNext()) {
+                System.out.println(it.next());
             }
         }
         catch (Exception e) {
@@ -33,13 +33,20 @@ public class Inferences {
         }
     }
 
-    private void SimilarToUnixInference() {
-        OntClass similarToUnixClass = owlModel.getOntClass(SIMILAR_TO_UNIX_URI);
-        ExtendedIterator<OntClass> similarToUnix  = similarToUnixClass.listSubClasses();
+    private DLQueryEngine getEngine() throws OWLOntologyCreationException {
+        ClassLoader classLoader = getClass().getClassLoader();
+        String ontologyPath = URLDecoder.decode(classLoader.getResource("ontology/unix-family.owl").getFile());
 
-        while (similarToUnix.hasNext()) {
-            OntClass instance = similarToUnix.next();
-            System.out.println(instance.getURI());
-        }
+        OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
+        OWLOntology ontology = manager
+                .loadOntologyFromOntologyDocument(
+                        new FileDocumentSource(new File(ontologyPath)));
+
+        OWLReasoner reasoner = new Reasoner(ontology);
+        ShortFormProvider shortFormProvider = new SimpleShortFormProvider();
+
+        DLQueryEngine engine = new DLQueryEngine(reasoner, shortFormProvider);
+
+        return engine;
     }
 }
