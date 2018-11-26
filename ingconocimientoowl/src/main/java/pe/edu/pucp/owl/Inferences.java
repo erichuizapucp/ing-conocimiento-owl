@@ -17,19 +17,44 @@ import java.util.Set;
 
 public class Inferences {
     private final String SIMILAR_TO_UNIX = "_SimilarToUnix";
+    private final String PRODUCTION_UNIX = "ProductionUnix";
+    private final String CERTIFIED_UNIX = "_CertifiedUnixSystem";
 
     public void processSimilarToUnix() {
         try {
-            DLQueryEngine engine = getEngine();
-            Set<OWLClass> result = engine.getSubClasses(SIMILAR_TO_UNIX, false);
-
-            Iterator<OWLClass> it = result.iterator();
-            while (it.hasNext()) {
-                System.out.println(it.next());
-            }
+            showResults(getResults(SIMILAR_TO_UNIX));
         }
         catch (Exception e) {
             System.err.println(e);
+        }
+    }
+    public void processProductionToUnix() {
+        try {
+            showResults(getResults(PRODUCTION_UNIX));
+        }
+        catch (Exception e) {
+            System.err.println(e);
+        }
+    }
+
+    public void processCertifiedUnix() {
+        try {
+            showResults(getResults(CERTIFIED_UNIX));
+        }
+        catch (Exception e) {
+            System.err.println(e);
+        }
+    }
+
+    private Set<OWLClass> getResults(String definedClass) throws OWLOntologyCreationException {
+        DLQueryEngine engine = getEngine();
+        return engine.getSubClasses(definedClass, false);
+    }
+
+    private void showResults(Set<OWLClass> result) {
+        Iterator<OWLClass> it = result.iterator();
+        while (it.hasNext()) {
+            System.out.println(it.next());
         }
     }
 
