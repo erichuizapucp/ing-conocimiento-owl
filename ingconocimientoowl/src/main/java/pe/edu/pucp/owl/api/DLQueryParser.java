@@ -21,9 +21,7 @@ public class DLQueryParser {
         this.rootOntology = rootOntology;
         OWLOntologyManager manager = rootOntology.getOWLOntologyManager();
         Set<OWLOntology> importsClosure = rootOntology.getImportsClosure();
-        // Create a bidirectional short form provider to do the actual mapping.
-        // It will generate names using the input
-        // short form provider.
+
         bidiShortFormProvider = new BidirectionalShortFormProviderAdapter(manager,
                 importsClosure, shortFormProvider);
     }
