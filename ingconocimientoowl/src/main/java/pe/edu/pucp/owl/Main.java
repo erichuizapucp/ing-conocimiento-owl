@@ -27,6 +27,9 @@ public class Main {
                     if (className.equals("similar-to-unix")) {
                         inferences.processSimilarToUnix();
                     }
+                    if (className.equals("production-unix")) {
+                        inferences.processProductionToUnix();
+                    }
                 }
             }
 

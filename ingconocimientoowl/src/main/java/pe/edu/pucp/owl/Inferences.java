@@ -17,11 +17,26 @@ import java.util.Set;
 
 public class Inferences {
     private final String SIMILAR_TO_UNIX = "_SimilarToUnix";
+    private final String PRODUCTION_UNIX = "ProductionUnix";
 
     public void processSimilarToUnix() {
         try {
             DLQueryEngine engine = getEngine();
             Set<OWLClass> result = engine.getSubClasses(SIMILAR_TO_UNIX, false);
+
+            Iterator<OWLClass> it = result.iterator();
+            while (it.hasNext()) {
+                System.out.println(it.next());
+            }
+        }
+        catch (Exception e) {
+            System.err.println(e);
+        }
+    }
+    public void processProductionToUnix() {
+        try {
+            DLQueryEngine engine = getEngine();
+            Set<OWLClass> result = engine.getSubClasses(PRODUCTION_UNIX, false);
 
             Iterator<OWLClass> it = result.iterator();
             while (it.hasNext()) {
