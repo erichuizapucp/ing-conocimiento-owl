@@ -26,6 +26,14 @@ public class Main {
                     inferences.processInference(className);
                 }
             }
+
+            if (cmd.hasOption("s")) {
+                SparqlQueries sparqlQueries = new SparqlQueries();
+                if (cmd.hasOption("query")) {
+                    String query = cmd.getOptionValue("query");
+                    sparqlQueries.executeQuery(query);
+                }
+            }
         }
         catch (ParseException e) {
             System.err.println(e);
@@ -49,6 +57,13 @@ public class Main {
     }
 
     public static Options buildSparqlOptions(Options options) {
+        options.addOption("s", "search", false, "Performs searches using Sparql");
+        options.addOption(Option.builder()
+                .longOpt("query")
+                .desc("Query")
+                .hasArg()
+                .argName("QUERY")
+                .build());
         return options;
     }
 }
