@@ -717,6 +717,20 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCertification"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#SpecVersionUnix93"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCertification"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#SpecVersionUnix95"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -894,6 +908,24 @@
 
     <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Solaris">
         <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Sun"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCertification"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#SpecVersionUnix98"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#SystemV"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasLicensingModel"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#ClosedSource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#SunOS"/>
     </owl:Class>
     
@@ -943,6 +975,18 @@
 
     <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SunOS">
         <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Sun"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCertification"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#SpecVersionUnix03"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasLicensingModel"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#ClosedSource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -957,6 +1001,12 @@
                 <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Unix32V"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasLicensingModel"/>
+                <owl:allValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#ClosedSource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -965,6 +1015,32 @@
 
     <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SystemV">
         <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#AT&amp;T"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCertification"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#SpecVersionUnix93"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCertification"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#SpecVersionUnix95"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#SystemIII"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasLicensingModel"/>
+                <owl:allValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#ClosedSource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1358,7 +1434,6 @@
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SpecVersionUnix03"/>
             <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SpecVersionUnix93"/>
-            <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SpecVersionUnix95"/>
             <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SpecVersionUnix98"/>
         </owl:members>
     </rdf:Description>
