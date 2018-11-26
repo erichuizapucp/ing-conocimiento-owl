@@ -30,6 +30,9 @@ public class Main {
                     if (className.equals("production-unix")) {
                         inferences.processProductionToUnix();
                     }
+                    if (className.equals("certified-unix")) {
+                        inferences.processCertifiedUnix();
+                    }
                 }
             }
 
