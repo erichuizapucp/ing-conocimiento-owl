@@ -332,10 +332,60 @@
     
 
 
-    <!-- http://www.pucp.edu.pe/ontologies/unix-family#HP-UX -->
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#HP-UX1.0-1.2 -->
 
-    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#HP-UX">
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#HP-UX1.0-1.2">
         <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#HP"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#SystemV"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#HP-UX2.0-3.0 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#HP-UX2.0-3.0">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#HP"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#HP-UX1.0-1.2"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#SystemV"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#HP-UX6-11 -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#HP-UX6-11">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#HP"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#HP-UX2.0-3.0"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#SystemV"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -732,7 +782,7 @@
             </owl:Class>
         </rdfs:subClassOf>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#OpenServer6x -->
@@ -758,7 +808,7 @@
             </owl:Class>
         </rdfs:subClassOf>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#OpenSource -->
@@ -766,7 +816,7 @@
     <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#OpenSource">
         <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#LicensingModelPartition"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#PDP-7 -->
@@ -774,7 +824,7 @@
     <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#PDP-7">
         <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#AT&amp;T"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#ProductionUnix -->
@@ -801,7 +851,7 @@
             </owl:Class>
         </owl:equivalentClass>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#SCOUnix3x -->
@@ -823,7 +873,7 @@
             </owl:Class>
         </rdfs:subClassOf>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#SCOXenix -->
@@ -845,7 +895,7 @@
             </owl:Class>
         </rdfs:subClassOf>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#SCOXenix286 -->
@@ -871,7 +921,7 @@
             </owl:Class>
         </rdfs:subClassOf>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#SCOXenix386 -->
@@ -893,7 +943,7 @@
             </owl:Class>
         </rdfs:subClassOf>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#SharedSource -->
@@ -901,7 +951,7 @@
     <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SharedSource">
         <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#LicensingModelPartition"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#Solaris -->
@@ -928,7 +978,7 @@
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#SunOS"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#SpecVersionUnix03 -->
@@ -936,7 +986,7 @@
     <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SpecVersionUnix03">
         <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#UnixSpecificationVersionPartition"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#SpecVersionUnix93 -->
@@ -944,7 +994,7 @@
     <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SpecVersionUnix93">
         <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#UnixSpecificationVersionPartition"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#SpecVersionUnix95 -->
@@ -952,7 +1002,7 @@
     <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SpecVersionUnix95">
         <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#UnixSpecificationVersionPartition"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#SpecVersionUnix98 -->
@@ -960,7 +1010,7 @@
     <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SpecVersionUnix98">
         <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#UnixSpecificationVersionPartition"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#Sun -->
@@ -968,7 +1018,7 @@
     <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Sun">
         <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Unix"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#SunOS -->
@@ -988,7 +1038,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#SystemIII -->
@@ -1008,7 +1058,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#SystemV -->
@@ -1042,7 +1092,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#Unix -->
@@ -1050,7 +1100,7 @@
     <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Unix">
         <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#OS"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#Unix1-4 -->
@@ -1064,7 +1114,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#Unix32V -->
@@ -1078,7 +1128,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#Unix5-6 -->
@@ -1092,7 +1142,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#Unix7 -->
@@ -1106,7 +1156,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#Unix8 -->
@@ -1128,7 +1178,7 @@
             </owl:Class>
         </rdfs:subClassOf>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#Unix9-10 -->
@@ -1150,7 +1200,7 @@
             </owl:Class>
         </rdfs:subClassOf>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#UnixSpecificationVersionPartition -->
@@ -1168,13 +1218,13 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#ValuePartition"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#ValuePartition -->
 
     <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#ValuePartition"/>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#Xenix -->
@@ -1182,7 +1232,7 @@
     <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Xenix">
         <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Unix"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#Xenix1x -->
@@ -1204,7 +1254,7 @@
             </owl:Class>
         </rdfs:subClassOf>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#Xenix2x -->
@@ -1226,7 +1276,7 @@
             </owl:Class>
         </rdfs:subClassOf>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#Xenix3x -->
@@ -1252,7 +1302,7 @@
             </owl:Class>
         </rdfs:subClassOf>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#_CertifiedUnixSystem -->
@@ -1281,7 +1331,7 @@
             </owl:Class>
         </owl:equivalentClass>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#_SimilarToUnix -->
@@ -1301,7 +1351,7 @@
             </owl:Class>
         </owl:equivalentClass>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#_TraditionalUnix -->
@@ -1326,7 +1376,7 @@
             </owl:Class>
         </owl:equivalentClass>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#386BSD -->
@@ -1340,7 +1390,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#AT&amp;T -->
@@ -1348,7 +1398,7 @@
     <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#AT&amp;T">
         <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Unix"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#BSD4.4-Lite&amp;LiteRelease2 -->
@@ -1362,10 +1412,24 @@
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
+    
 
 
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#HP-UX11i+ -->
 
-    <!--
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#HP-UX11i+">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#HP"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#HP-UX6-11"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // General axioms
@@ -1442,3 +1506,4 @@
 
 
 <!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+
