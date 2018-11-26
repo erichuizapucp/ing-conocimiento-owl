@@ -703,6 +703,12 @@
 
     <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#OpenServer5x">
         <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Xenix"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#SCOUnix3x"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -711,6 +717,20 @@
 
     <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#OpenServer6x">
         <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Xenix"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#OpenServer5x"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#SystemV"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -758,10 +778,30 @@
     
 
 
+    <!-- http://www.pucp.edu.pe/ontologies/unix-family#SCOUnix3x -->
+
+    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SCOUnix3x">
+        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Xenix"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#SCOXenix386"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://www.pucp.edu.pe/ontologies/unix-family#SCOXenix -->
 
     <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SCOXenix">
         <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Xenix"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Xenix3x"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -770,6 +810,20 @@
 
     <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SCOXenix286">
         <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Xenix"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#SCOXenix"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#SystemV"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -778,14 +832,12 @@
 
     <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SCOXenix386">
         <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Xenix"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.pucp.edu.pe/ontologies/unix-family#SCOXenix3x -->
-
-    <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SCOXenix3x">
-        <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Xenix"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#SCOXenix286"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -859,6 +911,12 @@
 
     <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SystemIII">
         <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#AT&amp;T"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Unix32V"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1015,6 +1073,12 @@
 
     <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Xenix1x">
         <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Xenix"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Unix7"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1023,6 +1087,12 @@
 
     <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Xenix2x">
         <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Xenix"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Xenix1x"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1031,6 +1101,20 @@
 
     <owl:Class rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Xenix3x">
         <rdfs:subClassOf rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Xenix"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#SystemIII"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#hasCharacteristicsOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pucp.edu.pe/ontologies/unix-family#Xenix2x"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1200,10 +1284,10 @@
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#OpenServer5x"/>
             <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#OpenServer6x"/>
+            <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SCOUnix3x"/>
             <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SCOXenix"/>
             <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SCOXenix286"/>
             <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SCOXenix386"/>
-            <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#SCOXenix3x"/>
             <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Xenix1x"/>
             <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Xenix2x"/>
             <rdf:Description rdf:about="http://www.pucp.edu.pe/ontologies/unix-family#Xenix3x"/>
