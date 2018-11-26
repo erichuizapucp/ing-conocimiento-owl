@@ -5,12 +5,9 @@ import org.apache.jena.ontology.OntModel;
 import org.apache.jena.ontology.OntModelSpec;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
-import org.apache.jena.reasoner.rulesys.OWLFBRuleReasoner;
-import org.apache.jena.reasoner.rulesys.OWLFBRuleReasonerFactory;
 import org.apache.jena.util.FileManager;
 import org.apache.jena.util.iterator.ExtendedIterator;
 
-import java.util.List;
 
 public class Inferences {
     private final String UNIX_FAMILY_NS = "http://www.pucp.edu.pe/ontologies/unix-family#";
