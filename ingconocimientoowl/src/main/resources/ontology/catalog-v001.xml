@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+<<<<<<< HEAD
         <uri id="Automatically generated entry, Timestamp=1543210453296" name="http://www.pucp.edu.pe/ontologies/unix-family" uri="unix-family.owl"/>
+=======
+        <uri id="Automatically generated entry, Timestamp=1543205364703" name="duplicate:http://www.pucp.edu.pe/ontologies/unix-family" uri="unix-family.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1543205364703" name="duplicate:http://www.pucp.edu.pe/ontologies/unix-family" uri="unix-family.owl.rdf"/>
+>>>>>>> 9ddad0d4adb7216486e1366cdeb0f78eb340c808
     </group>
 </catalog>
