@@ -52,7 +52,7 @@ public class Inferences {
     }
 
     private void showResults(Set<OWLClass> result) {
-        Iterator<OWLClass> it = result.iterator();
+        Iterator<OWLClass> it = result.stream().filter(c -> !c.isOWLNothing()).iterator();
         while (it.hasNext()) {
             System.out.println(it.next());
         }

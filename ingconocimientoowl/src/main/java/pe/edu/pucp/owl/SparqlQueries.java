@@ -11,8 +11,6 @@ import java.io.IOException;
 
 
 public class SparqlQueries {
-    private final String UNIX_FAMILY_NS = "http://www.pucp.edu.pe/ontologies/unix-family#";
-
     public void executeQuery(String queryName) {
         OntModel model = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM);
         FileManager.get().readModel(model, "ontology/unix-family.owl");
