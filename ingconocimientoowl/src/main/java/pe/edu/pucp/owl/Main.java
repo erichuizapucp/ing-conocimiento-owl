@@ -8,6 +8,7 @@ public class Main {
             Options options = new Options();
 
             options = buildValidateOntologyOptions(options);
+            options = buildValidateOntologyOptions2(options);
             options = buildInferencyOptions(options);
             options = buildSparqlOptions(options);
 
@@ -17,6 +18,11 @@ public class Main {
             if (cmd.hasOption("v")) {
                 Validation validation = new Validation();
                 validation.ValidateOwlModel();
+            }
+
+            if (cmd.hasOption("v2")) {
+                Validation2 validation = new Validation2();
+                validation.validateOntology();
             }
 
             if (cmd.hasOption("i")) {
@@ -51,6 +57,11 @@ public class Main {
 
     public static Options buildValidateOntologyOptions(Options options) {
         options.addOption("v", "validate", false, "Validates ontology");
+        return options;
+    }
+
+    public static Options buildValidateOntologyOptions2(Options options) {
+        options.addOption("v2", "validate", false, "Validates ontology");
         return options;
     }
 
