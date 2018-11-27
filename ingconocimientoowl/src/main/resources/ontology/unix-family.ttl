@@ -474,12 +474,46 @@
 
 ###  http://www.pucp.edu.pe/ontologies/unix-family#OpenServer5x
 :OpenServer5x rdf:type owl:Class ;
-              rdfs:subClassOf :Xenix .
+              rdfs:subClassOf :Xenix ,
+                              [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :hasCertification ;
+                                                       owl:someValuesFrom :SpecVersionUnix93
+                                                     ]
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :hasCertification ;
+                                                       owl:someValuesFrom :SpecVersionUnix95
+                                                     ]
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasCharacteristicsOf ;
+                                owl:someValuesFrom :SCOUnix3x
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasLicensingModel ;
+                                owl:allValuesFrom :ClosedSource
+                              ] .
 
 
 ###  http://www.pucp.edu.pe/ontologies/unix-family#OpenServer6x
 :OpenServer6x rdf:type owl:Class ;
-              rdfs:subClassOf :Xenix .
+              rdfs:subClassOf :Xenix ,
+                              [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :hasCharacteristicsOf ;
+                                                       owl:someValuesFrom :OpenServer5x
+                                                     ]
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :hasCharacteristicsOf ;
+                                                       owl:someValuesFrom :SystemV
+                                                     ]
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasLicensingModel ;
+                                owl:allValuesFrom :ClosedSource
+                              ] .
 
 
 ###  http://www.pucp.edu.pe/ontologies/unix-family#OpenSource
@@ -512,24 +546,63 @@
                                     ] .
 
 
+###  http://www.pucp.edu.pe/ontologies/unix-family#SCOUnix3x
+:SCOUnix3x rdf:type owl:Class ;
+           rdfs:subClassOf :Xenix ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasCharacteristicsOf ;
+                             owl:someValuesFrom :SCOXenix386
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasLicensingModel ;
+                             owl:allValuesFrom :ClosedSource
+                           ] .
+
+
 ###  http://www.pucp.edu.pe/ontologies/unix-family#SCOXenix
 :SCOXenix rdf:type owl:Class ;
-          rdfs:subClassOf :Xenix .
+          rdfs:subClassOf :Xenix ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasCharacteristicsOf ;
+                            owl:someValuesFrom :Xenix3x
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasLicensingModel ;
+                            owl:allValuesFrom :ClosedSource
+                          ] .
 
 
 ###  http://www.pucp.edu.pe/ontologies/unix-family#SCOXenix286
 :SCOXenix286 rdf:type owl:Class ;
-             rdfs:subClassOf :Xenix .
+             rdfs:subClassOf :Xenix ,
+                             [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :hasCharacteristicsOf ;
+                                                      owl:someValuesFrom :SCOXenix
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :hasCharacteristicsOf ;
+                                                      owl:someValuesFrom :SystemV
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasLicensingModel ;
+                               owl:allValuesFrom :ClosedSource
+                             ] .
 
 
 ###  http://www.pucp.edu.pe/ontologies/unix-family#SCOXenix386
 :SCOXenix386 rdf:type owl:Class ;
-             rdfs:subClassOf :Xenix .
-
-
-###  http://www.pucp.edu.pe/ontologies/unix-family#SCOXenix3x
-:SCOXenix3x rdf:type owl:Class ;
-            rdfs:subClassOf :Xenix .
+             rdfs:subClassOf :Xenix ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasCharacteristicsOf ;
+                               owl:someValuesFrom :SCOXenix286
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasLicensingModel ;
+                               owl:allValuesFrom :ClosedSource
+                             ] .
 
 
 ###  http://www.pucp.edu.pe/ontologies/unix-family#SharedSource
@@ -539,7 +612,19 @@
 
 ###  http://www.pucp.edu.pe/ontologies/unix-family#Solaris
 :Solaris rdf:type owl:Class ;
-         rdfs:subClassOf :Sun ;
+         rdfs:subClassOf :Sun ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasCertification ;
+                           owl:someValuesFrom :SpecVersionUnix98
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasCharacteristicsOf ;
+                           owl:someValuesFrom :SystemV
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasLicensingModel ;
+                           owl:someValuesFrom :ClosedSource
+                         ] ;
          owl:disjointWith :SunOS .
 
 
@@ -570,17 +655,52 @@
 
 ###  http://www.pucp.edu.pe/ontologies/unix-family#SunOS
 :SunOS rdf:type owl:Class ;
-       rdfs:subClassOf :Sun .
+       rdfs:subClassOf :Sun ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasCertification ;
+                         owl:someValuesFrom :SpecVersionUnix03
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasLicensingModel ;
+                         owl:someValuesFrom :ClosedSource
+                       ] .
 
 
 ###  http://www.pucp.edu.pe/ontologies/unix-family#SystemIII
 :SystemIII rdf:type owl:Class ;
-           rdfs:subClassOf <http://www.pucp.edu.pe/ontologies/unix-family#AT&T> .
+           rdfs:subClassOf <http://www.pucp.edu.pe/ontologies/unix-family#AT&T> ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasCharacteristicsOf ;
+                             owl:someValuesFrom :Unix32V
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasLicensingModel ;
+                             owl:allValuesFrom :ClosedSource
+                           ] .
 
 
 ###  http://www.pucp.edu.pe/ontologies/unix-family#SystemV
 :SystemV rdf:type owl:Class ;
-         rdfs:subClassOf <http://www.pucp.edu.pe/ontologies/unix-family#AT&T> .
+         rdfs:subClassOf <http://www.pucp.edu.pe/ontologies/unix-family#AT&T> ,
+                         [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :hasCertification ;
+                                                  owl:someValuesFrom :SpecVersionUnix93
+                                                ]
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :hasCertification ;
+                                                  owl:someValuesFrom :SpecVersionUnix95
+                                                ]
+                                              ) ;
+                           rdf:type owl:Class
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasCharacteristicsOf ;
+                           owl:someValuesFrom :SystemIII
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasLicensingModel ;
+                           owl:allValuesFrom :ClosedSource
+                         ] .
 
 
 ###  http://www.pucp.edu.pe/ontologies/unix-family#Unix
@@ -679,17 +799,48 @@
 
 ###  http://www.pucp.edu.pe/ontologies/unix-family#Xenix1x
 :Xenix1x rdf:type owl:Class ;
-         rdfs:subClassOf :Xenix .
+         rdfs:subClassOf :Xenix ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasCharacteristicsOf ;
+                           owl:someValuesFrom :Unix7
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasLicensingModel ;
+                           owl:allValuesFrom :ClosedSource
+                         ] .
 
 
 ###  http://www.pucp.edu.pe/ontologies/unix-family#Xenix2x
 :Xenix2x rdf:type owl:Class ;
-         rdfs:subClassOf :Xenix .
+         rdfs:subClassOf :Xenix ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasCharacteristicsOf ;
+                           owl:someValuesFrom :Xenix1x
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasLicensingModel ;
+                           owl:allValuesFrom :ClosedSource
+                         ] .
 
 
 ###  http://www.pucp.edu.pe/ontologies/unix-family#Xenix3x
 :Xenix3x rdf:type owl:Class ;
-         rdfs:subClassOf :Xenix .
+         rdfs:subClassOf :Xenix ,
+                         [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :hasCharacteristicsOf ;
+                                                  owl:someValuesFrom :SystemIII
+                                                ]
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :hasCharacteristicsOf ;
+                                                  owl:someValuesFrom :Xenix2x
+                                                ]
+                                              ) ;
+                           rdf:type owl:Class
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasLicensingModel ;
+                           owl:allValuesFrom :ClosedSource
+                         ] .
 
 
 ###  http://www.pucp.edu.pe/ontologies/unix-family#_CertifiedUnixSystem
@@ -820,10 +971,10 @@
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( :OpenServer5x
                 :OpenServer6x
+                :SCOUnix3x
                 :SCOXenix
                 :SCOXenix286
                 :SCOXenix386
-                :SCOXenix3x
                 :Xenix1x
                 :Xenix2x
                 :Xenix3x
@@ -834,7 +985,6 @@
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( :SpecVersionUnix03
                 :SpecVersionUnix93
-                :SpecVersionUnix95
                 :SpecVersionUnix98
               )
 ] .
